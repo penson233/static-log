@@ -41,7 +41,7 @@ def finding(text,file_time,save_path):
                     request_4 = re.sub("\[.*?\]", '', request_3[1])
                     requests_dict[request_3[0].replace(' ','')].append(request_4)
 
-    with open(f'{save_path}\ip.txt','w') as f:
+    with open(f'{save_path}\ip.txt','a') as f:
         for key in requests_dict:
             counts = Counter(requests_dict[key]).most_common(30)
             for count in counts:
