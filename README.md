@@ -5,7 +5,7 @@ it can help you to static ip,request,ip's amount,request's amount.
 
 you must install Python Install third party modules brefore you use it!
 
-## pip3 -r requirements.txt
+## pip3 install -r requirements.txt
 
 ## python3 main.py -l (your log path) -s (you want to save and default is: it will generate in directory main.py in)
 
