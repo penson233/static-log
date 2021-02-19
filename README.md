@@ -15,17 +15,17 @@ you must install Python Install third party modules brefore you use it!
 
 
 it will save as log's generate times
-![1](https://github.com/penson233/static-log/blob/main/images/1.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210219174640511.png)
 
 
 it is ip requests
-![2](https://github.com/penson233/static-log/blob/main/images/2.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210219174632868.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvcFJvbWVv,size_16,color_FFFFFF,t_70)
 
 
 it is the number of ip
 
-![3](https://github.com/penson233/static-log/blob/main/images/3.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210219174648387.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvcFJvbWVv,size_16,color_FFFFFF,t_70)
 it is the ua of ip
-![4](https://github.com/penson233/static-log/blob/main/images/4.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210219174656720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvcFJvbWVv,size_16,color_FFFFFF,t_70)
 and it will generrate ip.txt it found ,you can use nmap to Batch scanning by foundip.txt
-![5](https://github.com/penson233/static-log/blob/main/images/5.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210219174700824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvcFJvbWVv,size_16,color_FFFFFF,t_70)
