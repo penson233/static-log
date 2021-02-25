@@ -153,11 +153,6 @@ def where_ip(save_path,file_time):
             # print(key,country,province,city,ip_dict[key])
             list.append([key,country,province,city,type,ip_dict[key]])
             savetable(table,key,country,province,city,type,ip_dict[key])
-            # i+=1
-            # if(i==35*j):
-            #     print("每35个ip一组，请耐心等待~~~")
-            #     time.sleep(35)
-            #     j+=1
             time.sleep(0.1)
         except:
             print(f"{key} is error")
