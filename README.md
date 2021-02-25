@@ -23,9 +23,12 @@ it is ip requests
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210219174632868.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvcFJvbWVv,size_16,color_FFFFFF,t_70)
 
 
-it is the number of ip
+it is the number of ip it will find the location of ip
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210219174648387.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvcFJvbWVv,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2021022521252889.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvcFJvbWVv,size_16,color_FFFFFF,t_70)
+
+and save as excel
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210225212737497.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NvcFJvbWVv,size_16,color_FFFFFF,t_70)
 
 it is the ua of ip
 
