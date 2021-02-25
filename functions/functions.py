@@ -29,8 +29,8 @@ def is_path(path):
         return None
 
 #保存为表格
-def savetable(table,ip,country,province,city,count):
-    table.add_row([ip,country,province,city,count])
+def savetable(table,ip,country,province,city,type,count):
+    table.add_row([ip,country,province,city,type,count])
     print(table)
 
 #查找日志文件
@@ -103,23 +103,22 @@ def finding(text,file_time,save_path):
 
 #查询ip位置
 def request(ip):
+    apikey = "b54b66c16a25d938"
+
+    url = "https://api.binstd.com/ip/location?appkey={}&ip={}"
     header = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
         'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6',
     }
 
-    url=f"http://ip-api.com/json/{ip}?lang=zh-CN"
-    res = requests.get(url=url,headers=header)
-    json = res.json()
-    country=json['country']
-    province =json['regionName']
-    city=json['city']
-    if province =="":
-        province="无"
-    if city =="":
-        city="无"
-
-    return country,province,city
+    newurl=url.format(apikey,ip)
+    res = requests.get(url=newurl,headers=header)
+    json = res.json()['result']
+    country=json['country'] if json['country']!=None else "空"
+    province =json['province'] if json['country']!=None else "空"
+    city=json['city'] if json['country']!=None else "空"
+    type =json['type'] if json['type']!=None else "空"
+    return country,province,city,type
 
 #列出ip
 def iplist(save_path,file_time):
@@ -146,28 +145,28 @@ def where_ip(save_path,file_time):
 
 
     table = PrettyTable()
-    table.field_names=["ip","国家","省份","城市","访问次数"]
+    table.field_names=["ip","国家","省份","城市","归属","访问次数"]
 
     for key in ip_dict:
         try:
-            country,province,city=request(key)
+            country,province,city,type=request(key)
             # print(key,country,province,city,ip_dict[key])
-            list.append([key,country,province,city,ip_dict[key]])
-            savetable(table,key,country,province,city,ip_dict[key])
-            i+=1
-            if(i==35*j):
-                print("每35个ip一组，请耐心等待~~~")
-                time.sleep(35)
-                j+=1
+            list.append([key,country,province,city,type,ip_dict[key]])
+            savetable(table,key,country,province,city,type,ip_dict[key])
+            # i+=1
+            # if(i==35*j):
+            #     print("每35个ip一组，请耐心等待~~~")
+            #     time.sleep(35)
+            #     j+=1
             time.sleep(0.1)
         except:
             print(f"{key} is error")
 
     wb_ip=Workbook()
     ws_ip=wb_ip.active
-    ws_ip.append(["ip","国家","省份","城市","访问次数"])
+    ws_ip.append(["ip","国家","省份","城市","归属","访问次数"])
     for i in list:
-        ws_ip.append([i[0],i[1],i[2],i[3],i[4]])
+        ws_ip.append([i[0],i[1],i[2],i[3],i[4],i[5]])
 
     wb_ip.save(f"{save_path}\{file_time}\ip请求次数统计.xls")
 
