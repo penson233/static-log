@@ -31,5 +31,5 @@ if __name__ == '__main__':
     Static.static_log()
     print(f"success all save  ！！ it is in {save_path}")
     print("start find ip please wait")
-    Static.finding()
+    Static.finding_ip()
 

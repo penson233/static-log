@@ -1,0 +1,13 @@
+dict://
+file://
+gopher://
+https://127.0.0.1
+http://0.0.0.0
+ldap://
+ftp://
+zip://
+php://
+data://
+file://
+http://520193
+http://177001

@@ -19,9 +19,9 @@ class StaticLog:
             file_time = get_filetime(file)
             with open(file, 'r', encoding='utf-8') as f:
                 text = f.read()
-                finding(text, file_time, self.save_path)
+                outjson,outjson_ua,ip_list=finding(text, file_time, self.save_path)
 
-    def finding(self):
+    def finding_ip(self):
         for i in self.dir_list:
             file = f"{self.log_path}\\{i}"
             file_time = get_filetime(file)
